@@ -5,16 +5,16 @@
     <AssemblyName>MineCase.Server.Interfaces</AssemblyName>
     <RootNamespace>MineCase.Server</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <CodeAnalysisRuleSet>../../build/Analyzers.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>../Analyzers.ruleset</CodeAnalysisRuleSet>
     <Configurations>Debug;Release;Appveyor;TravisCI</Configurations>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="World\Biomes\**" />
-    <EmbeddedResource Remove="World\Biomes\**" />
-    <None Remove="World\Biomes\**" />
+    <Compile Remove="World/Biomes/**" />
+    <EmbeddedResource Remove="World/Biomes/**" />
+    <None Remove="World/Biomes/**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,13 +28,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MineCase.Core\MineCase.Core.csproj" />
-    <ProjectReference Include="..\MineCase.Engine\MineCase.Server.Engine.csproj" />
-    <ProjectReference Include="..\MineCase.Protocol\MineCase.Protocol.csproj" />
+    <ProjectReference Include="../MineCase.Core/MineCase.Core.csproj" />
+    <ProjectReference Include="../MineCase.Engine/MineCase.Server.Engine.csproj" />
+    <ProjectReference Include="../MineCase.Protocol/MineCase.Protocol.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\build\stylecop.json" />
+    <AdditionalFiles Include="../stylecop.json" />
   </ItemGroup>
 
 </Project>
