@@ -1,6 +1,6 @@
 ﻿{
   "persistenceOptions": {
-    "connectionString": "mongodb://localhost:27017/minecase",
+    "connectionString": "mongodb://root:supersecret@mongo:27017/minecase",
     "databaseName": "minecase"
   }
 }
