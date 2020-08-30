@@ -1,0 +1,10 @@
+FROM alpine
+ 
+ENV DOTNET_ROOT=/opt/dotnet \
+    PATH=$PATH:/opt/dotnet
+
+WORKDIR $DOTNET_ROOT
+RUN wget https://download.visualstudio.microsoft.com/download/pr/1e5f22cc-4ac9-4316-8fbc-5ff884140d02/6f8c3a67deb898fb7e6b3ac09dcff2b3/dotnet-sdk-5.0.100-preview.8.20417.9-linux-musl-x64.tar.gz -O dotnet-sdk.tar.gz
+RUN tar -xzf dotnet-sdk.tar.gz
+RUN apk --no-cache add libstdc++ icu-libs
+RUN rm dotnet-sdk.tar.gz

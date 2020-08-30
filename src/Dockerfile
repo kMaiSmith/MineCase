@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/preview/sdk:5.0 AS builder
+FROM minecase.dotnet AS builder
 
 WORKDIR /build
 
@@ -17,7 +17,7 @@ ADD MineCase.Server.Interfaces      /build/MineCase.Server.Interfaces/
 
 RUN dotnet publish MineCase.Server/MineCase.Server.csproj
 
-FROM mcr.microsoft.com/dotnet/preview/runtime:5.0
+FROM minecase.dotnet
 
 ARG RELEASE_PROFILE=Release
 ARG TARGET_FRAMEWORK=net5.0
